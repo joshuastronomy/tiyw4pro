@@ -1,0 +1,54 @@
+h1  {
+  font-family: Pacifico;
+  text-align: center;
+  font-size: 4em;
+  color: #FF3C00;
+  margin: 20px 0;
+  text-shadow:
+    -1px -1px 0 lightblue,
+    1px -1px 0 lightblue,
+    -1px 1px 0 lightblue,
+    1px 1px 0 lightblue;
+}
+
+form  {
+  text-align: center;
+}
+input[type="text"] {
+  width: 80%;
+  height: 55px;
+  font-family: Pacifico;
+  font-size: 1.5em;
+  padding-left: 15px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="submit"]  {
+  font-family: Pacifico;
+  color: #FF3C00;
+  font-size: 2em;
+  border-radius: 5px;
+  border: none;
+  background-color: lightblue;
+  text-shadow:
+    -1px -1px 0 grey,
+    1px -1px 0 grey,
+    -1px 1px 0 grey,
+    1px 1px 0 grey;
+    vertical-align: bottom;
+}
+
+.songs-box  {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.songBox  {
+  flex-basis: 20%;
+  font-family: Quicksand;
+  text-align: center;
+}

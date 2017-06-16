@@ -1,0 +1,7 @@
+textarea input and a search button
+capture the value and use it to search the api
+return up to 15 items that match search value to artists
+build each object w artist img, song name, and artist name and append to html
+style with css
+use sc widget for playback
+change the source of the audio in the widget on click
