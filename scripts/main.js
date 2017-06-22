@@ -10,12 +10,18 @@ let queryValue = document.querySelector(".searchbar");
 
 let subButton = document.querySelector(".subButton");
 
+let widget = document.querySelector('#sc-widget');
+
 document.querySelector('.searchForm').onsubmit = function() {event.preventDefault(); spotlight()};
 
 
 // function searchCap(query) {
 //   console.log(query);
 // };
+
+function songSwap() {
+
+}
 
 
 function spotlight() {
@@ -36,6 +42,12 @@ function spotlight() {
       const info = tracksFields[idx];
       let songBox = document.createElement("div");
       songBox.classList.add("songBox");
+
+      songBox.addEventListener('click', function (){
+        let widgetIframe = document.getElementById('sc-widget'),
+          widget = SC.Widget(widgetIframe),
+          newSoundUrl = info.permalink_url;
+      });
 
       let cover = document.createElement("img");
       cover.setAttribute("src", info.artwork_url);
@@ -69,18 +81,18 @@ function spotlight() {
 // });
 
 
-(function() {
-  var widgetIframe = document.getElementById('sc-widget'),
-    widget = SC.Widget(widgetIframe),
-    newSoundUrl = 'http://soundcloud.com/forss/flickermood';
-
-  widget.bind(SC.Widget.Events.READY, function() {
-    // load new widget
-    widget.bind(SC.Widget.Events.FINISH, function() {
-      widget.load(newSoundUrl, {
-        show_artwork: false
-      });
-    });
-  });
-
-}());
+// (function() {
+//   var widgetIframe = document.getElementById('sc-widget'),
+//     widget = SC.Widget(widgetIframe),
+//     newSoundUrl = 'http://soundcloud.com/forss/flickermood';
+//
+//   widget.bind(SC.Widget.Events.READY, function() {
+//     // load new widget
+//     widget.bind(SC.Widget.Events.FINISH, function() {
+//       widget.load(newSoundUrl, {
+//         show_artwork: false
+//       });
+//     });
+//   });
+//
+// }());
