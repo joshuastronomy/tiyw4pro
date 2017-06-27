@@ -44,10 +44,14 @@ function spotlight() {
       songBox.classList.add("songBox");
 
       songBox.addEventListener('click', function (){
-        let widgetIframe = document.getElementById('sc-widget'),
-          widget = SC.Widget(widgetIframe),
-          newSoundUrl = info.permalink_url;
+        alert(info.uri)
       });
+
+      // songBox.addEventListener('click', function (){
+      //   let widgetIframe = document.getElementById('sc-widget'),
+      //     widget = SC.Widget(widgetIframe),
+      //     newSoundUrl = info.permalink_url;
+      // });
 
       let cover = document.createElement("img");
       cover.setAttribute("src", info.artwork_url);
